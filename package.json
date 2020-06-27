@@ -1,5 +1,5 @@
 {
-  "name": "zyre",
+  "name": "@dephraiim/zyre",
   "version": "0.1.0",
   "description": "An https library",
   "main": "zyre.js",
