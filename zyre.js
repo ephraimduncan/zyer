@@ -1,17 +1,17 @@
 /**
  *
  * @author: Ephraim Atta-Duncan
- * @name: Zyre.js (Inspired by Axios)
+ * @name: zyer.js (Inspired by Axios)
  * @license: MIT
  *
  */
 
 /**
- * main Zyre class.
+ * main zyer class.
  */
-class zyre {
+class zyer {
   constructor() {
-    this.zyre = new XMLHttpRequest();
+    this.zyer = new XMLHttpRequest();
   }
 
   /**
@@ -23,22 +23,22 @@ class zyre {
 
   get(url, header = ['Accept', 'application/json']) {
     return new Promise((resolve, reject) => {
-      this.zyre.open('GET', url);
-      this.zyre.setRequestHeader(...header);
+      this.zyer.open('GET', url);
+      this.zyer.setRequestHeader(...header);
 
-      this.zyre.onload = () => {
-        if (this.zyre.status === 200) {
-          resolve(JSON.parse(this.zyre.responseText));
+      this.zyer.onload = () => {
+        if (this.zyer.status === 200) {
+          resolve(JSON.parse(this.zyer.responseText));
         } else {
           reject(
             new Error(
-              `zyre: "${url}" failed with status: [${this.zyre.status} ${this.zyre.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
             ),
           );
         }
       };
 
-      this.zyre.send();
+      this.zyer.send();
     });
   }
 
@@ -51,21 +51,21 @@ class zyre {
    */
   post(url, data, header = ['Content-type', 'application/json']) {
     return new Promise((resolve, reject) => {
-      this.zyre.open('POST', url);
-      this.zyre.setRequestHeader(...header);
+      this.zyer.open('POST', url);
+      this.zyer.setRequestHeader(...header);
 
-      this.zyre.onload = () => {
-        if (this.zyre.status === 200) {
-          resolve(JSON.parse(this.zyre.responseText));
+      this.zyer.onload = () => {
+        if (this.zyer.status === 200) {
+          resolve(JSON.parse(this.zyer.responseText));
         } else {
           reject(
             new Error(
-              `zyre: "${url}" failed with status: [${this.zyre.status} ${this.zyre.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
             ),
           );
         }
       };
-      this.zyre.send(JSON.stringify(data));
+      this.zyer.send(JSON.stringify(data));
     });
   }
 
@@ -78,21 +78,21 @@ class zyre {
    */
   put(url, data, header = ['Content-type', 'application/json']) {
     return new Promise((resolve, reject) => {
-      this.zyre.open('PUT', url);
-      this.zyre.setRequestHeader(...header);
+      this.zyer.open('PUT', url);
+      this.zyer.setRequestHeader(...header);
 
-      this.zyre.onload = () => {
-        if (this.zyre.status === 200) {
-          resolve(JSON.parse(this.zyre.responseText));
+      this.zyer.onload = () => {
+        if (this.zyer.status === 200) {
+          resolve(JSON.parse(this.zyer.responseText));
         } else {
           reject(
             new Error(
-              `zyre: "${url}" failed with status: [${this.zyre.status} ${this.zyre.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
             ),
           );
         }
       };
-      this.zyre.send(JSON.stringify(data));
+      this.zyer.send(JSON.stringify(data));
     });
   }
 
@@ -105,21 +105,21 @@ class zyre {
 
   delete(url, header = ['Content-type', 'application/json']) {
     return new Promise((resolve, reject) => {
-      this.zyre.open('DELETE', url);
-      this.zyre.setRequestHeader(...header);
+      this.zyer.open('DELETE', url);
+      this.zyer.setRequestHeader(...header);
 
-      this.zyre.onload = () => {
-        if (this.zyre.status === 200) {
-          resolve(JSON.parse(this.zyre.responseText));
+      this.zyer.onload = () => {
+        if (this.zyer.status === 200) {
+          resolve(JSON.parse(this.zyer.responseText));
         } else {
           reject(
             new Error(
-              `zyre: "${url}" failed with status: [${this.zyre.status} ${this.zyre.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
             ),
           );
         }
       };
-      this.zyre.send();
+      this.zyer.send();
     });
   }
 }

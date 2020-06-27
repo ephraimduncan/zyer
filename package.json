@@ -1,8 +1,8 @@
 {
-  "name": "@dephraiim/zyre",
+  "name": "@dephraiim/zyer",
   "version": "0.1.0",
-  "description": "An https library",
-  "main": "zyre.js",
+  "description": "An https library for the browser",
+  "main": "zyer.js",
   "keywords": [
     "library",
     "https",
@@ -12,5 +12,16 @@
     "request"
   ],
   "author": "Ephraim Atta-Duncan",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dephraiim/zyer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephraiim/zyer/issues"
+  },
+  "homepage": "https://github.com/dephraiim/zyer#readme"
 }
