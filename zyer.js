@@ -32,7 +32,7 @@ class zyer {
         } else {
           reject(
             new Error(
-              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status}: ${this.zyer.statusText}]`,
             ),
           );
         }
@@ -55,12 +55,12 @@ class zyer {
       this.zyer.setRequestHeader(...header);
 
       this.zyer.onload = () => {
-        if (this.zyer.status === 200) {
+        if (this.zyer.status === 200 || this.zyer.status === 201) {
           resolve(JSON.parse(this.zyer.responseText));
         } else {
           reject(
             new Error(
-              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status}: ${this.zyer.statusText}]`,
             ),
           );
         }
@@ -87,7 +87,7 @@ class zyer {
         } else {
           reject(
             new Error(
-              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status}: ${this.zyer.statusText}]`,
             ),
           );
         }
@@ -114,7 +114,7 @@ class zyer {
         } else {
           reject(
             new Error(
-              `zyer: "${url}" failed with status: [${this.zyer.status} ${this.zyer.statusText}]`,
+              `zyer: "${url}" failed with status: [${this.zyer.status}: ${this.zyer.statusText}]`,
             ),
           );
         }
